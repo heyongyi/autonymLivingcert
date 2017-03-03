@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="50dip"
+        android:src="@drawable/success"
+        android:scaleType="fitCenter"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_marginLeft="20dip"
+    	android:layout_marginRight="20dip"
+    	android:layout_weight="1" >
+    	<TextView 
+	        android:id="@+id/failedtext"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="top|center_horizontal"
+	        android:layout_alignParentTop="true"
+	        android:textColor="#111111"
+	        android:textSize="20sp"
+	        android:text="验证失败，请重新录制"
+	        android:layout_gravity="center_horizontal"/>
+    	<Button 
+    	    android:id="@+id/failedbutton"
+    	    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:background="@drawable/btn_state"
+	        android:layout_marginBottom="60dip"
+	        android:textSize="16dip"
+	        android:textColor="#ffffff"
+	        android:text="重新开始"/>
+    </RelativeLayout>
+    
+
+</LinearLayout>

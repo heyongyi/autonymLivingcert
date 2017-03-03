@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_marginTop="15dip"
+    	android:layout_marginBottom="15dip"
+    	android:orientation="vertical" >
+        <TextView 
+            android:id="@+id/tc_rule"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_marginLeft="20dp"
+		    android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"/>
+        <Button
+            android:id="@+id/bt_nextfacescan"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/btn_state"
+            android:layout_marginLeft="35dp"
+		    android:layout_marginRight="35dp"
+            android:gravity="center"
+            android:text="下一步，人脸检测"
+            android:textColor="#ffffff"
+            android:textSize="16sp" 
+            android:layout_alignParentBottom="true"
+            android:onClick="donextface"
+            android:enabled="false"/>
+        <LinearLayout
+		    android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:layout_below="@id/tc_rule"
+	    	android:layout_above="@id/bt_nextfacescan"
+	    	android:layout_marginTop="15dip"
+	    	android:layout_marginBottom="15dip"
+	    	android:orientation="vertical" >
+	    	<RelativeLayout
+		        android:id="@+id/rl_front"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp"
+		        android:layout_marginBottom="10dip"
+		        android:layout_weight="1"
+		        android:orientation="vertical"
+		        android:background="@drawable/tophoneback"
+		        android:clickable="true"
+		        android:onClick="dofrontscan" >
+		       <ProgressBar
+				    android:id="@+id/front_progress" 
+				    android:layout_width="30dip"
+				    android:layout_height="30dip"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:visibility="invisible" />
+
+		        <Button
+		            android:id="@+id/frontscan"
+		            android:layout_width="match_parent"
+		            android:layout_height="45dip"
+		            android:background="@drawable/dophonebtn"
+		            android:gravity="center"
+		            android:text="拍攝头像所在面"
+		            android:textColor="#ffffff"
+		            android:textSize="16sp" 
+		            android:layout_alignParentBottom="true"
+		            android:onClick="dofrontscan"/>
+		        <ImageView
+		            android:id="@+id/iv_front"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_margin="3dip"
+		            android:layout_above="@id/frontscan"
+		            android:src="@drawable/photo_03"
+		            android:scaleType="fitCenter"/>
+	    	</RelativeLayout>
+			<RelativeLayout
+		        android:id="@+id/rl_back"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp"
+		        android:layout_marginTop="10dip"
+		        android:layout_weight="1"
+		        android:orientation="vertical" 
+		        android:background="@drawable/tophoneback"
+		        android:clickable="true"
+		        android:onClick="dobackscan" >
+		        <ProgressBar
+				    android:id="@+id/back_progress" 
+				    android:layout_width="30dip"
+				    android:layout_height="30dip"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:visibility="invisible" />
+		       
+		        <Button
+		            android:id="@+id/backscan"
+		            android:layout_width="match_parent"
+		            android:layout_height="45dip"
+		            android:background="@drawable/dophonebtn"
+		            android:gravity="center"
+		            android:text="拍摄国徽所在面"
+		            android:textColor="#ffffff"
+		            android:textSize="16sp"
+		            android:layout_alignParentBottom="true"
+		            android:onClick="dobackscan" />
+		        
+		        <ImageView
+		            android:id="@+id/iv_back"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_above="@id/backscan"
+		            android:layout_margin="3dip"
+		            android:scaleType="fitCenter"
+		            android:src="@drawable/photo_03"/>
+	    	</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	
+    
+        
+    
+</LinearLayout>

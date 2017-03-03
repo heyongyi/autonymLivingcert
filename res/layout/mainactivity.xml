@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="22dip"
+        android:background="@drawable/background_02" >
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginTop="60dip" >
+	  		<RelativeLayout 
+			    android:id="@+id/iv_phone"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentRight="true"
+			    android:paddingRight="13dip"
+			    android:visibility="invisible" >
+            	<ImageView
+              		android:layout_width="15dip"
+               		android:layout_height="15dip"
+                	android:layout_centerVertical="true"
+                	android:background="@drawable/btn_x"/>
+			</RelativeLayout>
+			<RelativeLayout 
+			    android:id="@+id/tv_phone"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentLeft="true"
+			    android:paddingRight="5dip" >
+            	<TextView 
+            	    android:layout_width="80dip"
+               		android:layout_height="17dip"
+                	android:layout_centerVertical="true"
+                	android:layout_centerHorizontal="true"
+                	android:text=" 联系电话"
+                	android:singleLine="true"
+                	android:textColor="#000"
+                	android:textSize="16sp"
+                	android:visibility="gone"/>
+            	<ImageView 
+            	    android:layout_width="50dip"
+               		android:layout_height="17dip"
+               		android:layout_centerInParent="true"
+               		android:src="@drawable/phonebmp"
+               		android:scaleType="fitCenter"/>
+			</RelativeLayout>
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_phone"
+                android:layout_toRightOf="@+id/tv_phone"
+                android:background="@null"
+                android:hint="下单时的预留联系电话"
+                android:textColorHint="#aaaaaa"
+                android:inputType="phone"
+                android:phoneNumber="true"
+                android:digits="1234567890-"
+                android:paddingLeft="8dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:maxLength="13" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dip"
+            android:layout_below="@+id/rl_phone"
+            android:background="#eeeeee" />
+
+        <RelativeLayout
+            android:id="@+id/rl_iccid"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_below="@+id/view" >
+			<RelativeLayout 
+			    android:id="@+id/iv_iccid"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentRight="true"
+			    android:paddingRight="13dip"
+			    android:visibility="invisible" >
+            	<ImageView
+	                android:layout_width="15dip"
+	                android:layout_height="15dip"
+	                android:layout_centerVertical="true"
+	                android:background="@drawable/btn_x"/>
+			</RelativeLayout>
+			<RelativeLayout 
+			    android:id="@+id/tv_iccid"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentLeft="true"
+			    android:paddingRight="5dip" >
+            	<TextView 
+            	    android:layout_width="80dip"
+               		android:layout_height="17dip"
+                	android:layout_centerVertical="true"
+                	android:layout_centerHorizontal="true"
+                	android:text=" ICCID后8位"
+                	android:singleLine="true"
+                	android:textColor="#000"
+                	android:textSize="16sp"
+                	android:visibility="gone"/>
+            	<ImageView 
+            	    android:layout_width="50dip"
+               		android:layout_height="17dip"
+               		android:layout_centerInParent="true"
+               		android:src="@drawable/iccidbmp"
+               		android:scaleType="fitCenter"/>
+			</RelativeLayout>
+            <EditText
+                android:id="@+id/et_iccid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_iccid"
+                android:layout_toRightOf="@+id/tv_iccid"
+                android:background="@null"
+                android:hint="卡背面ICCID后8位"
+                android:textColorHint="#aaaaaa"
+                android:inputType="text"
+                android:paddingLeft="8dip"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:textSize="16sp"
+                android:textColor="#000" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <RelativeLayout
+		    android:id="@+id/layout2"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginLeft="15dip"
+	        android:layout_marginRight="15dip"
+	        android:layout_weight="1"
+	        android:background="@drawable/background_01" >
+	        <TextView
+		        android:id="@+id/tv_order_error"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="27dip"
+		        android:layout_marginTop="17dip"
+		        android:text="没有找到您的订单"
+		        android:textColor="#991111"
+		        android:textSize="16sp"
+		        android:visibility="gone" />
+	
+		    <LinearLayout
+		        android:id="@+id/layout3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="15dip"
+		        android:layout_marginRight="15dip"
+		        android:layout_marginTop="16dip"
+		        android:layout_marginBottom="16dp"
+		        android:orientation="vertical" >
+				<Button
+				    android:id="@+id/activate"
+		            android:layout_width="match_parent"
+		            android:layout_height="45dip"
+		            android:background="@drawable/btn_state"
+		            android:gravity="center"
+		            android:onClick="doactivate"
+		            android:text="卡后激活"
+		            android:textColor="#ffffff"
+		            android:textSize="16sp"
+		            android:enabled="false"/>
+		        <Button
+		            android:id="@+id/repeal"
+		            android:layout_width="match_parent"
+		            android:layout_height="45dip"
+		            android:layout_marginTop="11dip"
+		            android:background="@drawable/btn_state"
+		            android:gravity="center"
+		            android:onClick="dorepeal"
+		            android:text="撤销"
+		            android:textColor="#ffffff"
+		            android:textSize="16sp"
+		            android:visibility="gone" />
+		        <ImageView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/demon"/>
+		    </LinearLayout>
+		</RelativeLayout>  
+	    <RelativeLayout
+		    android:id="@+id/layout4"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginLeft="15dip"
+	        android:layout_marginRight="15dip"
+	        android:layout_weight="5"
+	        android:layout_marginBottom="24dp"
+	        android:background="@drawable/background_03" >
+	    </RelativeLayout>
+    </LinearLayout>
+	
+
+
+</LinearLayout>

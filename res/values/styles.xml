@@ -1,0 +1,42 @@
+<resources>
+    
+    <style name="AcBar_titleStyle">    
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">16sp</item>    
+    </style>
+	<style name="custom_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#f3f3f3</item>
+        <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
+    </style>
+    
+	<style name="MenuTextStyle">
+        <item name="android:textColor">#FFFFFF</item>
+    	<item name="android:textSize">16sp</item>
+	</style>
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/custom_actionbar_style</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/nav_fanhui_xin_tiao</item>
+        <item name="android:actionBarSize">44dip</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.AppStartLoadTranslucent" parent="android:Theme.Holo.Light">  
+    	<item name="android:windowIsTranslucent">true</item> 
+    	<item name="android:windowNoTitle">true</item>  
+	</style>
+</resources>

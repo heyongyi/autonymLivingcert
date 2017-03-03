@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/main"
+    android:orientation="horizontal">
+    <ImageView 
+        android:id="@+id/main_back"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:src="@drawable/nav_fanhui_xin_tiao"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:layout_alignParentLeft="true"/>
+    
+    
+   <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="30dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="5dp"
+    	android:layout_centerInParent="true"
+    	android:layout_centerVertical="true"
+    	android:orientation="vertical">
+    	<TextView 
+    	    android:id="@+id/title_name"
+    	    android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:textColor="#aaaaaa"
+    		android:textSize="16sp"
+    		android:layout_gravity="center"
+    		android:gravity="center"/>
+
+    </LinearLayout>
+
+	
+</RelativeLayout>
+
